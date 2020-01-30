@@ -1,0 +1,51 @@
+<!-- Laura Davis  -->
+
+<!-- LinkedIn mobile Before
+This is a mockup of LinkedIn's mobile login page. Errors in markup, along with
+an unconventional use of JavaScript to make disappearing labels instead of using
+placeholders makes this site inaccessible to screen readers.
+The autofocus in the original source code was also on the email field, which
+might confuse someone who can't see the screen who would naturally
+assume that they were at the top of the form.
+-->
+
+<!doctype html>
+<html>
+  <head>
+    <title>Mobile LinkedIn Before</title>
+    <link href="stylesheet.css" rel="stylesheet" type="text/css">
+    <script>
+      
+      function deltext(val){
+        val.style.display='none'
+      }
+      
+      function replacetext(val, vn){
+          if(vn == ''){
+            val.style.display='block'
+          }
+      }
+    </script>
+  </head>
+	<body>
+    <div class="container">
+      <img src="images\linkedin_mobile_bg.png" alt="Linked In logo">
+    </div>
+      <div class="signin">
+      <form id="testform" method="post" action="#">
+        <section class="form-orig">
+        <label for="login-firstname" class="origlabel" id="firstname">First name</label>
+          <input type="text"class="lgtextbox"name="fn"autocomplete="off"placeholder=""aria-required="true"
+                 onfocus="deltext(firstname)" onblur="replacetext(firstname, this.value)"/><br>
+        <label for="login-lastname" class="origlabel" id="lastname">Last name</label>
+          <input type="text"class="lgtextbox"name="ln"autocomplete="off"placeholder=""aria-required="true"onfocus="deltext(lastname)" onblur="replacetext(lastname, this.value)"/><br>
+        <label for="login-email" class="origlabel" id="email">Email</label>
+          <input type="text"class="lgtextbox"name="em"autocomplete="off"placeholder=""aria-required="true" onfocus="deltext(email)" onblur="replacetext(email, this.value)"autofocus="autofocus"/><br>
+        <label for="login-pw" class="origlabel" id="password">Password</label>
+          <input type="text"class="lgtextbox"name="pw"autocomplete="off"placeholder=""aria-required="true" onfocus="deltext(password)" onblur="replacetext(password, this.value)"/><br>
+          </section>
+      </form>
+    </div>
+    
+  </body>
+</html>

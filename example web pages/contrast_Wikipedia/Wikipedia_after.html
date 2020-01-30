@@ -1,0 +1,305 @@
+<!-- Laura Davis -->
+
+<!-- Wikipedia After
+To implement the low luminance theme switcher, I added a button,
+a line of JavaScript, and a few lines of CSS. When the user clicks
+the button, the JavaScript toggles a class for the page's body.
+That class is then tied to CSS modifications, such as background
+and text color. The rest of the page is merely a copy of the original. 
+-->
+
+<!doctype html>
+<html>
+  <head>
+    <title>Wikipedia after</title>
+    <link href="stylesheet.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    
+    <!-- Button and JavaScript class toggler -->
+    <button id="change-theme">Change theme</button>
+    <script>
+      document.getElementById("change-theme").addEventListener("click", function() {
+        document.body.classList.toggle("dark-theme");
+      });
+    </script>
+    
+    <h1 id="firstHeading" class="firstHeading" lang="en">Web Content Accessibility Guidelines</h1>			
+    <div id="bodyContent" class="mw-body-content">
+				<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+				<div id="mw-content-text" dir="ltr" class="mw-content-ltr" lang="en"><div class="mw-parser-output"><p class="mw-empty-elt"></p>
+          
+        <p>The <b>Web Content Accessibility Guidelines</b> (<b>WCAG</b>) are part of a series of <a href="https://en.wikipedia.org/wiki/Web_accessibility" title="Web accessibility">web accessibility</a> guidelines published by the <a href="https://en.wikipedia.org/wiki/Web_Accessibility_Initiative" title="Web Accessibility Initiative">Web Accessibility Initiative</a> (WAI) of the <a href="https://en.wikipedia.org/wiki/World_Wide_Web_Consortium" title="World Wide Web Consortium">World Wide Web Consortium</a>
+         (W3C), the main international standards organization for the Internet. 
+        They are a set of recommendations for making Web content more 
+        accessible, primarily for people with <a href="https://en.wikipedia.org/wiki/Disabilities" class="mw-redirect" title="Disabilities">disabilities</a>—but also for all <a href="https://en.wikipedia.org/wiki/User_agent" title="User agent">user agents</a>,
+         including highly limited devices, such as mobile phones. The current 
+        version, WCAG 2.0, was published in December 2008 and became an <a href="https://en.wikipedia.org/wiki/International_Organization_for_Standardization" title="International Organization for Standardization">ISO</a> standard, ISO/IEC 40500:2012 in October 2012. WCAG 2.1 is a "Proposed Recommendation" as at April 2018.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">[1]</a></sup>
+        </p>
+
+        <div id="toc" class="toc"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" dir="ltr" lang="en"><h2>Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+        <ul>
+        <li class="toclevel-1 tocsection-1"><a href="#Earlier_guidelines"><span class="tocnumber">1</span> <span class="toctext">Earlier guidelines</span></a></li>
+        <li class="toclevel-1 tocsection-2"><a href="#WCAG_1.0"><span class="tocnumber">2</span> <span class="toctext">WCAG 1.0</span></a>
+        <ul>
+        <li class="toclevel-2 tocsection-3"><a href="#WCAG_Samurai"><span class="tocnumber">2.1</span> <span class="toctext">WCAG Samurai</span></a></li>
+        </ul>
+        </li>
+        <li class="toclevel-1 tocsection-4"><a href="#WCAG_2.0"><span class="tocnumber">3</span> <span class="toctext">WCAG 2.0</span></a>
+        <ul>
+        <li class="toclevel-2 tocsection-5"><a href="#Principles"><span class="tocnumber">3.1</span> <span class="toctext">Principles</span></a>
+        <ul>
+        <li class="toclevel-3 tocsection-6"><a href="#Perceivable"><span class="tocnumber">3.1.1</span> <span class="toctext">Perceivable</span></a></li>
+        <li class="toclevel-3 tocsection-7"><a href="#Operable"><span class="tocnumber">3.1.2</span> <span class="toctext">Operable</span></a></li>
+        <li class="toclevel-3 tocsection-8"><a href="#Understandable"><span class="tocnumber">3.1.3</span> <span class="toctext">Understandable</span></a></li>
+        <li class="toclevel-3 tocsection-9"><a href="#Robust"><span class="tocnumber">3.1.4</span> <span class="toctext">Robust</span></a></li>
+        </ul>
+        </li>
+        <li class="toclevel-2 tocsection-10"><a href="#Document_history"><span class="tocnumber">3.2</span> <span class="toctext">Document history</span></a></li>
+        </ul>
+        </li>
+        <li class="toclevel-1 tocsection-11"><a href="#Legal_obligations"><span class="tocnumber">4</span> <span class="toctext">Legal obligations</span></a>
+        <ul>
+        <li class="toclevel-2 tocsection-12"><a href="#United_States"><span class="tocnumber">4.1</span> <span class="toctext">United States</span></a></li>
+        <li class="toclevel-2 tocsection-13"><a href="#European_Union"><span class="tocnumber">4.2</span> <span class="toctext">European Union</span></a></li>
+        <li class="toclevel-2 tocsection-14"><a href="#United_Kingdom"><span class="tocnumber">4.3</span> <span class="toctext">United Kingdom</span></a></li>
+        <li class="toclevel-2 tocsection-15"><a href="#Canada"><span class="tocnumber">4.4</span> <span class="toctext">Canada</span></a></li>
+        <li class="toclevel-2 tocsection-16"><a href="#Australia"><span class="tocnumber">4.5</span> <span class="toctext">Australia</span></a></li>
+        <li class="toclevel-2 tocsection-17"><a href="#Israel"><span class="tocnumber">4.6</span> <span class="toctext">Israel</span></a></li>
+        </ul>
+        </li>
+        <li class="toclevel-1 tocsection-18"><a href="#References"><span class="tocnumber">5</span> <span class="toctext">References</span></a></li>
+        <li class="toclevel-1 tocsection-19"><a href="#External_links"><span class="tocnumber">6</span> <span class="toctext">External links</span></a>
+        <ul>
+        <li class="toclevel-2 tocsection-20"><a href="#Historic"><span class="tocnumber">6.1</span> <span class="toctext">Historic</span></a></li>
+        </ul>
+        </li>
+        </ul>
+        </div>
+
+        <h2><span class="mw-headline" id="Earlier_guidelines">Earlier guidelines</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Web_Content_Accessibility_Guidelines&amp;action=edit&amp;section=1" title="Edit section: Earlier guidelines">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+
+        <p>The first web accessibility guideline was compiled by Gregg 
+        Vanderheiden and released in January 1995, just after the 1994 Second 
+        International Conference on the World-Wide Web (WWW II) in Chicago 
+        (where <a href="https://en.wikipedia.org/wiki/Tim_Berners-Lee" title="Tim Berners-Lee">Tim Berners-Lee</a>
+         first mentioned disability access in a keynote speech after seeing a 
+        pre-conference workshop on accessibility led by Mike Paciello).<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">[2]</a></sup>
+        </p>
+
+        <p>Over 38 different Web access guidelines followed from various authors and organizations over the next few years.<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">[3]</a></sup> These were brought together in the <i>Unified Web Site Accessibility Guidelines</i> compiled at the <a href="https://en.wikipedia.org/wiki/University_of_Wisconsin-Madison" class="mw-redirect" title="University of Wisconsin-Madison">University of Wisconsin-Madison</a>.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">[4]</a></sup>
+        Version 8 of the <i>Unified Web Site Accessibility Guidelines</i>, published in 1998, served as the starting point for the W3C's WCAG 1.0.<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">[5]</a></sup>
+        </p>
+
+        <h2><span class="mw-headline" id="WCAG_1.0">WCAG 1.0</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Web_Content_Accessibility_Guidelines&amp;action=edit&amp;section=2" title="Edit section: WCAG 1.0">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+
+        <p>The WCAG 1.0 was published and became a <a href="https://en.wikipedia.org/wiki/W3C_recommendation" class="mw-redirect" title="W3C recommendation">W3C recommendation</a> on 5 May 1999. They have since been superseded by WCAG 2.0.
+        </p>
+
+        <p>WCAG 1.0 consist of 14 guidelines—each of which describes a 
+        general principle of accessible design. Each guideline covers a basic 
+        theme of web accessibility and is associated with one or more 
+        checkpoints that describes how to apply that guideline to particular 
+        webpage features.
+        </p>
+
+        <ul><li>Guideline 1: Provide equivalent alternatives to auditory and visual content</li>
+        <li>Guideline 2: Don’t rely on colour alone</li>
+        <li>Guideline 3: Use markup and style sheets, and do so properly</li>
+        <li>Guideline 4: Clarify natural language usage</li>
+        <li>Guideline 5: Create tables that transform gracefully</li>
+        <li>Guideline 6: Ensure that pages featuring new technologies transform gracefully</li>
+        <li>Guideline 7: Ensure user control of time sensitive content changes</li>
+        <li>Guideline 8: Ensure direct accessibility of embedded user interfaces</li>
+        <li>Guideline 9: Design for device independence</li>
+        <li>Guideline 10: User interim solutions</li>
+        <li>Guideline 11: Use <a href="https://en.wikipedia.org/wiki/W3C" class="mw-redirect" title="W3C">W3C</a> technologies and guidelines</li>
+        <li>Guideline 12: Provide context and orientation information</li>
+        <li>Guideline 13: Provide clear navigation mechanisms</li>
+        <li>Guideline 14: Ensure that documents are clear and simple</li></ul>
+
+        <p>Each of the in total 65 WCAG 1.0 checkpoints has an assigned <i>priority level</i> based on the checkpoint's impact on accessibility:
+        </p>
+
+        <ul><li>Priority 1: Web developers <b>must</b> satisfy these 
+        requirements, otherwise it will be impossible for one or more groups to 
+        access the Web content. Conformance to this level is described as <i>A.</i></li>
+        <li><span id="WCAG_1.0_AA"></span>Priority 2: Web developers <b>should</b>
+         satisfy these requirements, otherwise some groups will find it 
+        difficult to access the Web content. Conformance to this level is 
+        described as <i>AA</i> or <i>Double-A.</i></li>
+        <li><span id="WCAG_1.0_AAA"></span>Priority 3: Web developers <b>may</b>
+         satisfy these requirements to make it easier for some groups to access 
+        the Web content. Conformance to this level is described as <i>AAA</i> or <i>Triple-A.</i></li></ul>
+
+        <h3><span class="mw-headline" id="WCAG_Samurai">WCAG Samurai</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Web_Content_Accessibility_Guidelines&amp;action=edit&amp;section=3" title="Edit section: WCAG Samurai">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+
+        <p>In February 2008, The WCAG Samurai, a group of developers independent of the W3C, and led by <a href="https://en.wikipedia.org/w/index.php?title=Joe_Clark_(writer)&amp;action=edit&amp;redlink=1" class="new" title="Joe Clark (writer) (page does not exist)">Joe Clark</a>, published corrections for, and extensions to, the WCAG 1.0.<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">[6]</a></sup>
+        </p>
+
+        <h2><span class="mw-headline" id="WCAG_2.0">WCAG 2.0</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Web_Content_Accessibility_Guidelines&amp;action=edit&amp;section=4" title="Edit section: WCAG 2.0">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+
+        <p>WCAG 2.0 was published as a W3C Recommendation on 11 December 2008.<sup id="cite_ref-7" class="reference"><a href="#cite_note-7">[7]</a></sup><sup id="cite_ref-8" class="reference"><a href="#cite_note-8">[8]</a></sup> It consists of twelve guidelines (untestable) organized under four principles (websites must be <i>perceivable</i>, <i>operable</i>, <i>understandable</i>, and <i>robust</i>). Each guideline has testable success criteria (61 in all).<sup id="cite_ref-9" class="reference"><a href="#cite_note-9">[9]</a></sup> The W3C's Techniques for WCAG 2.0<sup id="cite_ref-10" class="reference"><a href="#cite_note-10">[10]</a></sup>
+         is a list of techniques that help authors meet the guidelines and 
+        success criteria. The techniques are periodically updated whereas the 
+        principles, guidelines and success criteria are stable and do not 
+        change.<sup id="cite_ref-11" class="reference"><a href="#cite_note-11">[11]</a></sup>
+        </p>
+
+        <h3><span class="mw-headline" id="Principles">Principles</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Web_Content_Accessibility_Guidelines&amp;action=edit&amp;section=5" title="Edit section: Principles">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+
+        <h4><span class="mw-headline" id="Perceivable">Perceivable</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Web_Content_Accessibility_Guidelines&amp;action=edit&amp;section=6" title="Edit section: Perceivable">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+
+        <p>Information and user interface components must be presentable to users in ways they can perceive.
+        </p>
+
+        <ul><li>Guideline 1.1: Provide text alternatives for any non-text 
+        content so that it can be changed into other forms people need, such as 
+        large print, braille, speech, symbols or simpler language.</li>
+        <li>Guideline 1.2: Time-based media: Provide alternatives for time-based media.</li>
+        <li>Guideline 1.3: Create content that can be presented in different 
+        ways (for example simpler layout) without losing information or 
+        structure.</li>
+        <li>Guideline 1.4: Make it easier for users to see and hear content including separating foreground from background.</li></ul>
+
+        <h4><span class="mw-headline" id="Operable">Operable</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Web_Content_Accessibility_Guidelines&amp;action=edit&amp;section=7" title="Edit section: Operable">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+
+        <p>User interface components and navigation must be operable.
+        </p>
+
+        <ul><li>Guideline 2.1: Make all functionality available from a keyboard.</li>
+        <li>Guideline 2.2: Provide users enough time to read and use content.</li>
+        <li>Guideline 2.3: Do not design content in a way that is known to cause seizures.</li>
+        <li>Guideline 2.4: Provide ways to help users navigate, find content, and determine where they are.</li></ul>
+
+        <h4><span class="mw-headline" id="Understandable">Understandable</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Web_Content_Accessibility_Guidelines&amp;action=edit&amp;section=8" title="Edit section: Understandable">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+
+        <p>Information and the operation of user interface must be understandable.
+        </p>
+
+        <ul><li>Guideline 3.1: Make text content readable and understandable.</li>
+        <li>Guideline 3.2: Make web pages appear and operate in predictable ways.</li>
+        <li>Guideline 3.3: Help users avoid and correct mistakes.</li></ul>
+        <h4><span class="mw-headline" id="Robust">Robust</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Web_Content_Accessibility_Guidelines&amp;action=edit&amp;section=9" title="Edit section: Robust">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+
+        <p>Content must be robust enough that it can be interpreted reliably by a
+         wide variety of user agents, including assistive technologies.
+        </p>
+
+        <ul><li>Guideline 4.1.: Maximize compatibility with current and future user agents, including assistive technologies.</li></ul>
+        <p>WCAG 2.0 uses the same  three <i>levels of conformance</i> (<i>A, AA, AAA</i>)
+         as WCAG 1.0, but has redefined them. The WCAG working group maintains 
+        an extensive list of web accessibility techniques and common failure 
+        cases for WCAG 2.0.<sup id="cite_ref-12" class="reference"><a href="#cite_note-12">[12]</a></sup>
+        </p>
+
+        <h3><span class="mw-headline" id="Document_history">Document history</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Web_Content_Accessibility_Guidelines&amp;action=edit&amp;section=10" title="Edit section: Document history">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+
+        <p>The first concept proposal of WCAG 2.0 was published on 25 January 
+        2001. In the following years new versions were published intended to 
+        solicit feedback from accessibility experts and members of the 
+        disability community. On 27 April 2006 a "Last Call Working Draft" was 
+        published.<sup id="cite_ref-13" class="reference"><a href="#cite_note-13">[13]</a></sup>
+         Due to the many amendments that were necessary, WCAG 2.0 was published 
+        again as a concept proposal on 17 May 2007, followed by a second "Last 
+        Call Working Draft" on 11 December 2007.<sup id="cite_ref-14" class="reference"><a href="#cite_note-14">[14]</a></sup><sup id="cite_ref-15" class="reference"><a href="#cite_note-15">[15]</a></sup> In April 2008 the guidelines became a "Candidate Recommendation".<sup id="cite_ref-16" class="reference"><a href="#cite_note-16">[16]</a></sup>
+         On 3 November 2008 the guidelines became a "Proposed Recommendation". 
+        WCAG 2.0 was published as a W3C Recommendation on 11 December 2008.
+        </p>
+
+        <p>A comparison of WCAG 1.0 checkpoints and WCAG 2.0 success criteria is available.<sup id="cite_ref-17" class="reference"><a href="#cite_note-17">[17]</a></sup>
+        </p>
+
+        <p>In October 2012, WCAG 2.0 was accepted by the <a href="https://en.wikipedia.org/wiki/International_Organization_for_Standardization" title="International Organization for Standardization">International Organization for Standardization</a> as an ISO International Standard, ISO/IEC 40500:2012.<sup id="cite_ref-W3C-ISO_18-0" class="reference"><a href="#cite_note-W3C-ISO-18">[18]</a></sup><sup id="cite_ref-W3C-announce_19-0" class="reference"><a href="#cite_note-W3C-announce-19">[19]</a></sup><sup id="cite_ref-ISO_20-0" class="reference"><a href="#cite_note-ISO-20">[20]</a></sup>
+        </p>
+
+        <p>In early 2014, WCAG 2.0's Level A and Level AA success criteria 
+        were incorporated as references in clause 9.2 ("Web content 
+        requirements") of the European standard EN 301 549 published by <a href="https://en.wikipedia.org/wiki/ETSI" title="ETSI">ETSI</a>.<sup id="cite_ref-21" class="reference"><a href="#cite_note-21">[21]</a></sup>
+         EN 301 549 was produced in response to a mandate that the European 
+        Commission gave to the three official European standardisation bodies (<a href="https://en.wikipedia.org/wiki/European_Committee_for_Standardization" title="European Committee for Standardization">CEN</a>, <a href="https://en.wikipedia.org/wiki/European_Committee_for_Electrotechnical_Standardization" title="European Committee for Electrotechnical Standardization">CENELEC</a> and ETSI) and is the first European standard for ICT products and services.<sup id="cite_ref-22" class="reference"><a href="#cite_note-22">[22]</a></sup><sup id="cite_ref-23" class="reference"><a href="#cite_note-23">[23]</a></sup>
+        </p>
+
+        <h2><span class="mw-headline" id="Legal_obligations">Legal obligations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Web_Content_Accessibility_Guidelines&amp;action=edit&amp;section=11" title="Edit section: Legal obligations">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+
+        <p>Businesses that have an online presence should provide accessibility 
+        to disabled users. Not only are there ethical and commercial 
+        justifications<sup id="cite_ref-24" class="reference"><a href="#cite_note-24">[24]</a></sup>
+         for implementing the Web Content Accessibility Guidelines, in some 
+        countries and jurisdictions, there are also legal reasons. Under UK law,
+         if a business's website is not accessible, then the website owner could
+         be sued for discrimination.<sup id="cite_ref-outlaw_25-0" class="reference"><a href="#cite_note-outlaw-25">[25]</a></sup>
+        </p>
+
+        <h3><span class="mw-headline" id="United_States">United States</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Web_Content_Accessibility_Guidelines&amp;action=edit&amp;section=12" title="Edit section: United States">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+
+        <p>In January 2017, the U.S. Access Board approved a final rule to update <a href="https://en.wikipedia.org/wiki/Section_508_Amendment_to_the_Rehabilitation_Act_of_1973" title="Section 508 Amendment to the Rehabilitation Act of 1973">Section 508 of the Rehabilitation Act of 1973</a>.
+         The new rule adopts seventeen WCAG 2.0 success criteria, but 22 of the 
+        38 existing A-level and AA-level criteria were already covered by 
+        existing Section 508 guidelines. The rule requires adherence to the new 
+        standards twelve months from its date of publication in the federal 
+        register. <sup id="cite_ref-26" class="reference"><a href="#cite_note-26">[26]</a></sup> <sup id="cite_ref-27" class="reference"><a href="#cite_note-27">[27]</a></sup>
+        </p>
+
+        <p>In 2017, a Federal Court in Florida identified the WCAG 
+        guidelines as the "industry standard" for website accessibility and 
+        found that Winn Dixie Store, Inc., violated the Americans with 
+        Disabilities Act by failing to render its website accessible to the 
+        sight impaired.<sup id="cite_ref-28" class="reference"><a href="#cite_note-28">[28]</a></sup>
+        </p>
+
+        <h3><span class="mw-headline" id="European_Union">European Union</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Web_Content_Accessibility_Guidelines&amp;action=edit&amp;section=13" title="Edit section: European Union">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+
+        <p>In October 2016, the <a href="https://en.wikipedia.org/wiki/European_Parliament" title="European Parliament">European Parliament</a>
+         approved the directive 2016/2102 that requires websites and mobile 
+        applications of public sector bodies to conform with WCAG 2.0 Level AA.<sup id="cite_ref-29" class="reference"><a href="#cite_note-29">[29]</a></sup>
+         New websites must comply from 23 September 2019 on, old websites from 
+        23 September 2020 on and mobile applications from 23 June 2021 on.<sup id="cite_ref-30" class="reference"><a href="#cite_note-30">[30]</a></sup>
+        </p>
+
+        <h3><span class="mw-headline" id="United_Kingdom">United Kingdom</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Web_Content_Accessibility_Guidelines&amp;action=edit&amp;section=14" title="Edit section: United Kingdom">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+
+        <p>In January 2012, the <a href="https://en.wikipedia.org/wiki/Royal_National_Institute_for_the_Blind" class="mw-redirect" title="Royal National Institute for the Blind">Royal National Institute for the Blind</a> (RNIB) in the <a href="https://en.wikipedia.org/wiki/United_Kingdom" title="United Kingdom">United Kingdom</a> issued a press release stating that it had served legal proceedings against low-cost airline <a href="https://en.wikipedia.org/wiki/Bmibaby" title="Bmibaby">Bmibaby</a><sup id="cite_ref-31" class="reference"><a href="#cite_note-31">[31]</a></sup>
+         over their "failure to ensure web access for blind and partially 
+        sighted customers". As of October 2011, at least two actions against 
+        websites had been initiated by the RNIB, and settled without the cases 
+        being heard by a court.<sup id="cite_ref-outlaw_25-1" class="reference"><a href="#cite_note-outlaw-25">[25]</a></sup>
+        </p>
+
+        <p>An <a href="https://en.wikipedia.org/wiki/Employment_tribunal" title="Employment tribunal">employment tribunal</a>
+         finding against the Project Management Institute (PMI), was decided in 
+        October 2006, and the company was ordered to pay compensation of £3,000 
+        for discrimination.<sup id="cite_ref-32" class="reference"><a href="#cite_note-32">[32]</a></sup>
+        </p>
+
+        <h3><span class="mw-headline" id="Canada">Canada</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Web_Content_Accessibility_Guidelines&amp;action=edit&amp;section=15" title="Edit section: Canada">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+
+        <p>The 2010/2012 Jodhan decision<sup id="cite_ref-33" class="reference"><a href="#cite_note-33">[33]</a></sup>
+         caused the Canadian federal government to require all online web pages,
+         documents and videos available externally and internally to meet the 
+        accessibility requirements of WCAG 2.0.<sup id="cite_ref-34" class="reference"><a href="#cite_note-34">[34]</a></sup>
+        </p>
+
+        <h3><span class="mw-headline" id="Australia">Australia</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Web_Content_Accessibility_Guidelines&amp;action=edit&amp;section=16" title="Edit section: Australia">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+
+        <p>The Australian government has also mandated via the <a href="https://en.wikipedia.org/wiki/Disability_Discrimination_Act_1992" title="Disability Discrimination Act 1992">Disability Discrimination Act 1992</a> that all Australian government websites meet the WCAG accessibility requirements.<sup id="cite_ref-35" class="reference"><a href="#cite_note-35">[35]</a></sup>
+        </p>
+
+        <h3><span class="mw-headline" id="Israel">Israel</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Web_Content_Accessibility_Guidelines&amp;action=edit&amp;section=17" title="Edit section: Israel">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+
+        <p>The Israeli Ministry of Justice published regulations in early 2014, 
+        requiring Internet websites to comply with Israeli Standard 5568, which 
+        is based on the W3C Web Content Accessibility Guidelines 2.0.
+        </p><p>The main differences between the Israeli standard and the W3C 
+        standard concern the requirements to provide captions and texts for 
+        audio and video media. The Israeli standards are somewhat more lenient, 
+        reflecting the current technical difficulties in providing such captions
+         and texts in Hebrew.<sup id="cite_ref-36" class="reference"><a href="#cite_note-36">[36]</a></sup>
+        </p>
+
+        </div>
+      </div>
+    </div>
+    
+  </body>
+</html>

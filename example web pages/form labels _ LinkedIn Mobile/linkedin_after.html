@@ -1,0 +1,37 @@
+<!-- Laura Davis -->
+
+<!-- LinkedIn mobile After
+This is the repaired version of the LinkedIn mobile login site.
+I've removed the JavaScript and labels altogether and replaced them
+with placeholders for sighted users and aria-label for people who
+are using screen readers. I've also changed the focus to the first
+input in the form (first name) to avoid confusing users who are using
+screen readers.
+-->
+
+<!doctype html>
+<html>
+  <head>
+    <title>Mobile LinkedIn After</title>
+    <link href="stylesheet.css" rel="stylesheet" type="text/css">
+  </head>
+	<body>
+    <div class="container">
+      <img src="images\linkedin_mobile_bg.png" alt="Linked In logo">
+    </div>
+    
+    <div class="signin_fixed">
+      <form method="post" action="#">
+        <label class="col-label" id="firstname"></label>
+          <input type="text" class="lgtextbox" name="fn" autocomplete="off" aria-label="First name" aria-required="true" placeholder="First name" autofocus><br>
+        <label class="col-label" id="lastname"></label>
+          <input type="text" class="lgtextbox" name="ln" autocomplete="off" aria-label="Last name" aria-required="true" placeholder="Last name"><br>
+        <label class="col-label" id="emailaddress"></label>
+          <input type="text" class="lgtextbox" name="email" autocomplete="off" aria-label="Email address" aria-required="true" placeholder="Email address"><br>
+        <label class="col-label" id="password"></label>
+          <input type="text" class="lgtextbox" name="pw" autocomplete="off" aria-label="Password" aria-required="true" placeholder="Password"><br>
+      </form>
+    </div>
+    
+  </body>
+</html>
